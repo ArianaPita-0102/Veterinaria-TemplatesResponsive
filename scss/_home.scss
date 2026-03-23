@@ -56,10 +56,10 @@
   }
   
   .about-text {
-    width: 100%; // Asegura que el texto use todo el ancho disponible
+    width: 100%; 
     
     p {
-      max-width: 800px; // Opcional: para que las líneas de texto no sean infinitas y cansen la vista
+      max-width: 800px; 
       margin-bottom: 1.5rem;
     }
   }
@@ -85,13 +85,14 @@
 
   .about-gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.8rem;
 
-    img {
-      border-radius: 14px;
-      min-height: 180px;
+   img {
+      width: 100%;
+      aspect-ratio: 1 / 1; 
       object-fit: cover;
+      border-radius: 14px;
     }
   }
 }
