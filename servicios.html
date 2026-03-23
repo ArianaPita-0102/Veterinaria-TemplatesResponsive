@@ -1,165 +1,169 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Servicios</title>
+    <title>Servicios - Mascotas Vet MJ&ARI</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <nav>
-        <div>
-          <span>pets</span>
-          <span>The Curated Sanctuary</span>
+      <nav class="nav-container">
+        <div class="logo">
+          <span class="brand-name">Mascotas Vet MJ&ARI</span>
         </div>
-
-        <div>
-          <a href="#">Wellness Care</a>
-          <a href="#">Surgical Excellence</a>
-          <a href="#">Diagnostics</a>
-          <a href="#">Contact Us</a>
-        </div>
-
-        <button>Emergency Call</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html" class="active">Servicios</a></li>
+          <li><a href="contacto.html">Contáctanos</a></li>
+        </ul>
+        <button class="btn-emergency" aria-label="Llamada de emergencia">
+          Llamada de Emergencia
+        </button>
       </nav>
     </header>
 
     <main>
-      <section>
-        <span>Comprehensive Care</span>
-        <h1>Our Comprehensive Services</h1>
+      <section class="services-hero">
+        <span class="subtitle">Cuidado Integral</span>
+        <h1>Nuestros Servicios Especializados</h1>
         <p>
-          Where medical precision meets gentle care. We provide a full spectrum
-          of veterinary specializations designed for the lifelong health of your
-          companion.
+          Donde la precisión médica se encuentra con un trato amable. Ofrecemos
+          un espectro completo de especialidades veterinarias.
         </p>
       </section>
 
-      <section>
-        <button>All Services</button>
-        <button>General Care</button>
-        <button>Specialist</button>
-        <button>Urgent Care</button>
-      </section>
-
-      <section>
-        <div>
-          <h3>Wellness Exams</h3>
-          <p>
-            Comprehensive physical assessments and preventative screening to
-            ensure early detection and lifelong vitality for your pet.
-          </p>
-          <button>Learn More</button>
-        </div>
-
-        <div>
-          <h3>Surgical Care</h3>
-          <p>
-            Advanced surgical procedures performed in a sterile,
-            state-of-the-art environment with the highest standards of
-            anesthesia safety.
-          </p>
-          <button>Learn More</button>
-        </div>
-
-        <div>
-          <h3>Vaccinations</h3>
-          <p>
-            Tailored immunization protocols designed specifically for your pet's
-            lifestyle, environment, and individual risk factors.
-          </p>
-          <button>Learn More</button>
-        </div>
-
-        <div>
-          <h3>Dental Health</h3>
-          <p>
-            Professional cleanings and advanced periodontal care to prevent
-            systemic disease and maintain a pain-free smile.
-          </p>
-          <button>Learn More</button>
-        </div>
-
-        <div>
-          <h3>Pharmacy</h3>
-          <p>
-            Convenient on-site and online pharmacy services providing verified
-            medications and therapeutic nutrition plans.
-          </p>
-          <button>Learn More</button>
-        </div>
-
-        <div>
-          <h3>Diagnostics</h3>
-          <p>
-            Rapid-result laboratory and digital imaging technologies to provide
-            immediate answers when every second counts.
-          </p>
-          <button>Learn More</button>
+      <section class="filters-container">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">
+            Todos los Servicios
+          </button>
+          <button class="filter-btn" data-filter="general">
+            Cuidado General
+          </button>
+          <button class="filter-btn" data-filter="specialist">
+            Especialistas
+          </button>
+          <button class="filter-btn" data-filter="urgent">Urgencias</button>
         </div>
       </section>
 
-      <section>
-        <div>
-          <h2>Need Urgent Specialized Care?</h2>
-          <p>
-            Our team of board-certified specialists is available for advanced
-            diagnostic and therapeutic procedures that require a higher level of
-            veterinary expertise.
-          </p>
+      <section class="services-grid-container">
+        <div class="services-grid">
+          <article class="service-card" data-category="general">
+            <div class="card-icon">🩺</div>
+            <h3>Exámenes de Bienestar</h3>
+            <p>
+              Evaluaciones físicas integrales y detecciones preventivas para
+              asegurar una vitalidad duradera.
+            </p>
+            <button class="btn-text">Saber más</button>
+          </article>
 
-          <button>Book a Consultation</button>
-          <button>Meet the Team</button>
+          <article class="service-card" data-category="specialist">
+            <div class="card-icon">🔪</div>
+            <h3>Cuidado Quirúrgico</h3>
+            <p>
+              Procedimientos avanzados realizados en un entorno estéril con los
+              más altos estándares de anestesia.
+            </p>
+            <button class="btn-text">Saber más</button>
+          </article>
+
+          <article class="service-card" data-category="general">
+            <div class="card-icon">💉</div>
+            <h3>Vacunación</h3>
+            <p>
+              Protocolos de inmunización personalizados según el estilo de vida
+              y entorno de tu mascota.
+            </p>
+            <button class="btn-text">Saber más</button>
+          </article>
+
+          <article class="service-card" data-category="general">
+            <div class="card-icon">🦷</div>
+            <h3>Salud Dental</h3>
+            <p>
+              Limpiezas profesionales y cuidado periodontal para prevenir
+              enfermedades sistémicas.
+            </p>
+            <button class="btn-text">Saber más</button>
+          </article>
+
+          <article class="service-card" data-category="urgent">
+            <div class="card-icon">💊</div>
+            <h3>Farmacia 24/7</h3>
+            <p>
+              Servicio de farmacia propio con medicamentos verificados y planes
+              de nutrición terapéutica.
+            </p>
+            <button class="btn-text">Saber más</button>
+          </article>
+
+          <article class="service-card" data-category="specialist">
+            <div class="card-icon">🔬</div>
+            <h3>Diagnósticos</h3>
+            <p>
+              Laboratorio de resultados rápidos e imágenes digitales para
+              obtener respuestas inmediatas.
+            </p>
+            <button class="btn-text">Saber más</button>
+          </article>
         </div>
+      </section>
 
-        <div>
+      <section class="urgent-info">
+        <div class="info-content">
+          <h2>¿Necesitas atención especializada urgente?</h2>
+          <p>
+            Nuestro equipo de especialistas certificados está disponible para
+            diagnósticos avanzados que requieren un alto nivel de experiencia
+            técnica.
+          </p>
+          <div class="cta-group">
+            <button class="btn-primary">Reservar Consulta</button>
+            <button class="btn-secondary">Conocer al Equipo</button>
+          </div>
+        </div>
+        <div class="info-image">
           <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYVRyqqEAA0Drt5GLhH8mFtDGSvTZeT7LRDZsaWxJTe8L_zsBr35TV4dIXfqbKQSe-ibRGpWBaDXY8oSXWc-7RhowiKjTHM1rID7p6qGYcc_52D0UBoZmOHj9FANN5TbRP_R9zulUHOOOUDF3i2uUZx2ZOrlUgUSscc7a0twmwUOgQ7yecjfkMiwRVALUiC0f8FYDVDqmn09fADTUStjQjajjVvXo_5jxUVvstNacZ10u3Ll9-8zAbMk0HKLWqPywW7GIpEHKptJ0"
-            alt="Veterinary Specialist"
+            src="img/consultorio.png"
+            alt="Especialista veterinario examinando una radiografía"
           />
         </div>
       </section>
     </main>
 
     <footer>
-      <div>
-        <span>pets</span>
-        <span>The Curated Sanctuary</span>
-        <p>
-          Elevating the standard of veterinary excellence through clinical
-          precision and compassionate heart.
-        </p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mascotas Vet MJ&ARI</h4>
+          <p>
+            Elevando el estándar de excelencia veterinaria a través de precisión
+            clínica y corazón compasivo.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Mantente Conectado</h4>
+          <p>Calle Ficticia #123, Cochabamba</p>
+          <p>Abierto 24/7 para Emergencias</p>
+        </div>
       </div>
-
-      <div>
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="#">Wellness Care</a></li>
-          <li><a href="#">Surgical Excellence</a></li>
-          <li><a href="#">Diagnostics</a></li>
-        </ul>
-
-        <h4>Resources</h4>
-        <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Stay Connected</h4>
-        <a href="#">mail</a>
-        <a href="#">call</a>
-
-        <p>
-          123 Sanctuary Lane, Editorial Heights<br />
-          Open 24/7 for Emergencies
-        </p>
-      </div>
-
-      <div>
-        © 2024 The Curated Sanctuary Veterinary Specialist. All rights reserved.
+      <div class="footer-bottom">
+        <p>© 2026 Mascotas Vet MJ&ARI. Todos los derechos reservados.</p>
       </div>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
