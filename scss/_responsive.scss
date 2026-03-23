@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 @media (max-width: $mobile) {
   .hero-section,
   .services-hero,

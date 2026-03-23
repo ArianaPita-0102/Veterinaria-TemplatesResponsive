@@ -1,111 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fcf8f5;
-  color: #2f2f2f;
-  line-height: 1.6;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  color: inherit;
-}
-
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 8px;
-  background: #4b3832;
-  color: #ffffff;
-  padding: 8px 12px;
-  border-radius: 8px;
-}
-.skip-link:focus {
-  top: 8px;
-  z-index: 4000;
-}
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 1.8rem;
-}
-
-.subtitle {
-  color: #b4846c;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-  font-size: 0.82rem;
-}
-
-.btn-primary,
-.btn-secondary,
-.btn-emergency,
-.btn-emergency-lg {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 0;
-  border-radius: 999px;
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: 600;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-.btn-primary:hover,
-.btn-secondary:hover,
-.btn-emergency:hover,
-.btn-emergency-lg:hover {
-  transform: translateY(-2px);
-}
-
-.btn-primary {
-  background: #7d5a50;
-  color: #ffffff;
-  padding: 0.85rem 1.5rem;
-}
-
-.btn-secondary {
-  background: transparent;
-  color: #4b3832;
-  border: 1px solid rgba(75, 56, 50, 0.35);
-  padding: 0.8rem 1.4rem;
-}
-
-.back-to-top {
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  width: 44px;
-  height: 44px;
-  border: 0;
-  border-radius: 50%;
-  background: #4b3832;
-  color: #ffffff;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.2s ease;
-  z-index: 2000;
-}
-.back-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
 .site-header {
   position: sticky;
   top: 0;
@@ -230,14 +122,22 @@ a {
   padding: 2.2rem 0;
 }
 .about-section .about-container {
-  display: grid;
-  gap: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 .about-section .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 0.8rem;
   margin-top: 1rem;
+}
+.about-section .about-text {
+  width: 100%;
+}
+.about-section .about-text p {
+  max-width: 800px;
+  margin-bottom: 1.5rem;
 }
 .about-section .stat-item {
   background: #ffffff;
@@ -257,6 +157,7 @@ a {
 }
 .about-section .about-gallery {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.8rem;
 }
 .about-section .about-gallery img {
@@ -285,7 +186,29 @@ a {
   display: none;
 }
 .slider-section .slide.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+}
+.slider-section .slide .patient-photo {
+  display: flex;
+  justify-content: center;
+}
+.slider-section .slide .patient-photo img {
+  width: auto;
+  object-fit: contain;
   display: block;
+  border-radius: 12px;
+  height: 20vh;
+  min-height: 100px;
+}
+@media (min-width: 768px) {
+  .slider-section .slide .patient-photo img {
+    height: 50vh;
+    max-height: 600px;
+  }
 }
 .slider-section .slide h3 {
   color: #7d5a50;
@@ -675,6 +598,113 @@ footer .footer-bottom {
   .btn-secondary {
     width: 100%;
   }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fcf8f5;
+  color: #2f2f2f;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 8px;
+  background: #4b3832;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+.skip-link:focus {
+  top: 8px;
+  z-index: 4000;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+.subtitle {
+  color: #b4846c;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-emergency,
+.btn-emergency-lg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-emergency:hover,
+.btn-emergency-lg:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: #7d5a50;
+  color: #ffffff;
+  padding: 0.85rem 1.5rem;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #4b3832;
+  border: 1px solid rgba(75, 56, 50, 0.35);
+  padding: 0.8rem 1.4rem;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: #4b3832;
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease;
+  z-index: 2000;
+}
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*# sourceMappingURL=style.css.map */

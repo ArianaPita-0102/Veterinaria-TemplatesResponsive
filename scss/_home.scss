@@ -1,3 +1,6 @@
+@use 'variables' as *;
+
+
 .hero-section,
 .about-section,
 .slider-section,
@@ -40,15 +43,25 @@
   padding: 2.2rem 0;
 
   .about-container {
-    display: grid;
-    gap: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
   }
-
+  
   .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     gap: 0.8rem;
     margin-top: 1rem;
+  }
+  
+  .about-text {
+    width: 100%; // Asegura que el texto use todo el ancho disponible
+    
+    p {
+      max-width: 800px; // Opcional: para que las líneas de texto no sean infinitas y cansen la vista
+      margin-bottom: 1.5rem;
+    }
   }
 
   .stat-item {
@@ -72,6 +85,7 @@
 
   .about-gallery {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
 
     img {
@@ -91,7 +105,7 @@
     align-items: center;
     gap: 0.7rem;
   }
-
+  
   .slides {
     background: $white;
     border-radius: $border-radius;
@@ -104,9 +118,30 @@
     display: none;
 
     &.active {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.6rem;
     }
+    .patient-photo {
+      display: flex;
+      justify-content: center;
 
+      
+      img {
+        width: auto;
+        object-fit: contain;
+        display: block;
+        border-radius: 12px;
+        height: 20vh;
+        min-height: 100px;
+        @media (min-width: 768px) {
+        height: 50vh; 
+        max-height: 600px; 
+        }
+      }
+    }
     h3 {
       color: $primary-color;
       margin-top: 0.8rem;
