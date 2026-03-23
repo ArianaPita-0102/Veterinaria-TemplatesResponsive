@@ -2,9 +2,11 @@ $primary-color: #7d5a50;    // Café principal
 $secondary-color: #b4846c;  // Café claro / canela
 $accent-color: #4b3832;     // Café oscuro para texto fuerte
 $bg-light: #fcf8f5;         // Crema/Beige muy claro para fondos
+$bg-card: #ffffff;          // Fondo de tarjetas
 $white: #ffffff;
 $text-main: #333333;
 $text-muted: #666666;
+$text-dark: #2d2421;        // Texto principal oscuro
 
 // Tipografía
 $font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,3 +14,4 @@ $font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 $tablet: 768px;
 $desktop: 1024px;
+$mobile: 480px;
