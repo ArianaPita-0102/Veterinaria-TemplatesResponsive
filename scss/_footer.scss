@@ -1,0 +1,19 @@
+footer {
+    background-color: $accent-color;
+    color: $bg-light;
+    padding: 3rem 5% 1rem;
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding-bottom: 2rem;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 1rem;
+        font-size: 0.9rem;
+    }
+}
