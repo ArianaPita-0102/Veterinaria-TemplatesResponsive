@@ -10,7 +10,7 @@
     text-align: center;
     gap: 2rem;
 
-    @media (min-width: $laptop) {
+    @media (min-width: $desktop) {
         flex-direction: row;
         text-align: left;
         padding: 5rem 10%;
