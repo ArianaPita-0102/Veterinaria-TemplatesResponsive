@@ -1,0 +1,109 @@
+@import 'variables';
+
+.contact-hero {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    
+    .subtitle {
+        color: $secondary-color;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: $accent-color;
+        margin: 1rem 0;
+    }
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column; // Móvil primero [cite: 112, 115]
+    gap: 2rem;
+    padding: 0 1.5rem 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    @media (min-width: $tablet) {
+        flex-direction: row; // Tablet y Laptop [cite: 110, 111]
+    }
+
+    // Estilos del Formulario [cite: 80]
+    .contact-form-wrapper {
+        flex: 1.5;
+        background-color: $white;
+        padding: 2rem;
+        border-radius: $border-radius;
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            
+            label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+                color: $accent-color;
+                font-size: 0.9rem;
+            }
+
+            input, select, textarea {
+                width: 100%;
+                padding: 1rem;
+                border: none;
+                background-color: $bg-input;
+                border-radius: 8px;
+                font-family: $font-main;
+
+                &:focus {
+                    outline: 2px solid $secondary-color;
+                }
+            }
+        }
+    }
+
+    // Información Lateral [cite: 62]
+    .contact-info {
+        flex: 1;
+        background-color: #f4f1f0; // Fondo sutil para la info
+        padding: 2rem;
+        border-radius: $border-radius;
+
+        .info-block {
+            margin-bottom: 2rem;
+
+            h3 {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
+                color: $accent-color;
+            }
+
+            ul {
+                list-style: none;
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 0.5rem;
+                    color: $text-muted;
+                }
+            }
+        }
+    }
+}
+
+// Mapa Ficticio [cite: 63]
+.map-placeholder {
+    width: 100%;
+    height: 250px;
+    background-color: #e5e0dd;
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    border: 1px dashed $secondary-color;
+}

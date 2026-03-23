@@ -31,3 +31,40 @@
         }
     }
 }
+
+
+.emergency-cta {
+    padding: 4rem 1.5rem;
+    background-color: $bg-cream;
+
+    .cta-box {
+        background-color: #eeeae7;
+        padding: 3rem 2rem;
+        border-radius: 20px;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: $accent-color;
+        }
+
+        .btn-emergency-lg {
+            display: inline-block;
+            margin-top: 2rem;
+            background-color: #1a1a1a; // Botón negro como en la imagen
+            color: white;
+            padding: 1.2rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
