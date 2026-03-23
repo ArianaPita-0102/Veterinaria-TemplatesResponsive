@@ -1,27 +1,116 @@
 @import 'variables';
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: $font-main;
-    background-color: $bg-light;
-    color: $text-main;
-    line-height: 1.6;
+  font-family: $font-main;
+  background-color: $bg-light;
+  color: $text-main;
+  line-height: 1.6;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
+a {
+  color: inherit;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 8px;
+  background: $accent-color;
+  color: $white;
+  padding: 8px 12px;
+  border-radius: 8px;
+
+  &:focus {
+    top: 8px;
+    z-index: 4000;
+  }
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+.subtitle {
+  color: $secondary-color;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-emergency,
+.btn-emergency-lg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.btn-primary {
+  background: $primary-color;
+  color: $white;
+  padding: 0.85rem 1.5rem;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: $accent-color;
+  border: 1px solid rgba($accent-color, 0.35);
+  padding: 0.8rem 1.4rem;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: $accent-color;
+  color: $white;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease;
+  z-index: 2000;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 
 @import 'header';
 @import 'home';
+@import 'services';
+@import 'contact';
 @import 'footer';
-@import 'services';   
 @import 'responsive';
-@import 'contact';    

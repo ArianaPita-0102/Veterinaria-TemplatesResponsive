@@ -1,77 +1,164 @@
-.hero-section {
-    padding: 4rem 5%;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    gap: 2rem;
-
-    @media (min-width: $tablet) {
-        flex-direction: row;
-        min-height: 80vh;
-    }
-
-    .hero-text {
-        flex: 1;
-        .subtitle {
-            color: $secondary-color;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: bold;
-        }
-        h1 {
-            font-size: 2.5rem;
-            color: $accent-color;
-            margin: 1rem 0;
-            line-height: 1.2;
-        }
-    }
-
-    .hero-image {
-        flex: 1;
-        img {
-            border-radius: 20px;
-            box-shadow: 20px 20px 0px $secondary-color;
-        }
-    }
+.hero-section,
+.about-section,
+.slider-section,
+.features-section,
+.cta-section {
+  width: min(1200px, 92%);
+  margin: 0 auto;
 }
 
-// Botones globales (pueden ir en un archivo _buttons.scss o aquí)
-.btn-primary {
-    background-color: $primary-color;
-    color: $white;
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background 0.3s;
+.hero-section {
+  padding: 3rem 0 2.6rem;
 
-    &:hover {
-        background-color: $accent-color;
+  .hero-content {
+    display: grid;
+    gap: 1.6rem;
+    align-items: center;
+  }
+
+  h1 {
+    color: $accent-color;
+    line-height: 1.2;
+    margin: 0.8rem 0 1rem;
+    font-size: clamp(2rem, 4.4vw, 3rem);
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+  }
+
+  .hero-image img {
+    border-radius: 20px;
+    box-shadow: 16px 16px 0 rgba($secondary-color, 0.5);
+  }
+}
+
+.about-section {
+  padding: 2.2rem 0;
+
+  .about-container {
+    display: grid;
+    gap: 1.4rem;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .stat-item {
+    background: $white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: $shadow-soft;
+
+    .number {
+      display: block;
+      color: $primary-color;
+      font-size: 1.1rem;
+      font-weight: 800;
     }
+
+    .label {
+      color: $text-muted;
+      font-size: 0.9rem;
+    }
+  }
+
+  .about-gallery {
+    display: grid;
+    gap: 0.8rem;
+
+    img {
+      border-radius: 14px;
+      min-height: 180px;
+      object-fit: cover;
+    }
+  }
+}
+
+.slider-section {
+  padding: 2rem 0;
+
+  .slider {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .slides {
+    background: $white;
+    border-radius: $border-radius;
+    box-shadow: $shadow-soft;
+    padding: 1.4rem;
+    min-height: 160px;
+  }
+
+  .slide {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    h3 {
+      color: $primary-color;
+      margin-top: 0.8rem;
+      font-size: 1rem;
+    }
+  }
+
+  .slider-control {
+    border: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $primary-color;
+    color: $white;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
 }
 
 .features-section {
-    padding: 4rem 5%;
-    text-align: center;
-    background-color: $white;
+  padding: 2rem 0;
 
-    .features-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Grid dinámico [cite: 114]
-        gap: 2rem;
-        margin-top: 3rem;
+  .features-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
 
-        .feature-card {
-            padding: 2rem;
-            background: $bg-light;
-            border-radius: 15px;
-            transition: transform 0.3s;
+  .feature-card {
+    background: $white;
+    padding: 1.4rem;
+    border-radius: $border-radius;
+    box-shadow: $shadow-soft;
 
-            &:hover {
-                transform: translateY(-10px); // Usabilidad/Interacción [cite: 133]
-            }
-
-            h3 { color: $primary-color; margin-bottom: 1rem; }
-        }
+    h3 {
+      color: $accent-color;
+      margin-bottom: 0.4rem;
     }
+  }
+}
+
+.cta-section {
+  text-align: center;
+  background: linear-gradient(120deg, rgba($secondary-color, 0.2), rgba($primary-color, 0.15));
+  border-radius: 20px;
+  margin: 2rem auto 3rem;
+  padding: 2.2rem 1rem;
+}
+
+@media (min-width: $tablet) {
+  .hero-section .hero-content,
+  .about-section .about-container {
+    grid-template-columns: 1.1fr 1fr;
+  }
 }

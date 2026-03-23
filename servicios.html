@@ -3,148 +3,265 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Servicios veterinarios de Mascotas Vet MJ&ARI: medicina preventiva, cirugía, diagnóstico y urgencias."
+    />
     <title>Servicios - Mascotas Vet MJ&ARI</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <nav class="nav-container">
-        <div class="logo">
-          <span class="brand-name">Mascotas Vet MJ&ARI</span>
-        </div>
-        <ul class="nav-links">
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+    <header class="site-header">
+      <nav class="nav-container" aria-label="Navegación principal">
+        <a
+          class="logo"
+          href="index.html"
+          aria-label="Ir al inicio de Mascotas Vet MJ&ARI"
+        >
+          <span class="brand-name">Mascotas Vet MJ&amp;ARI</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mainNav"
+          aria-label="Abrir menú de navegación"
+        >
+          ☰
+        </button>
+
+        <ul class="nav-links" id="mainNav">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="servicios.html" class="active">Servicios</a></li>
           <li><a href="contacto.html">Contáctanos</a></li>
         </ul>
-        <button class="btn-emergency" aria-label="Llamada de emergencia">
+
+        <a
+          class="btn-emergency"
+          href="tel:5559990000"
+          aria-label="Llamada de emergencia"
+        >
           Llamada de Emergencia
-        </button>
+        </a>
       </nav>
     </header>
 
-    <main>
-      <section class="services-hero">
-        <span class="subtitle">Cuidado Integral</span>
-        <h1>Nuestros Servicios Especializados</h1>
+    <main id="contenido-principal">
+      <section class="services-hero" aria-labelledby="servicesTitle">
+        <span class="subtitle">Cuidado integral</span>
+        <h1 id="servicesTitle">Nuestros servicios especializados</h1>
         <p>
-          Donde la precisión médica se encuentra con un trato amable. Ofrecemos
-          un espectro completo de especialidades veterinarias.
+          Soluciones clínicas y preventivas para cada etapa de vida de tu
+          mascota.
         </p>
       </section>
 
-      <section class="filters-container">
-        <div class="filter-buttons">
-          <button class="filter-btn active" data-filter="all">
-            Todos los Servicios
+      <section class="filters-container" aria-label="Filtro de servicios">
+        <div class="filter-buttons" role="toolbar" aria-label="Categorías">
+          <button class="filter-btn active" data-filter="all" type="button">
+            Todos
           </button>
-          <button class="filter-btn" data-filter="general">
-            Cuidado General
+          <button class="filter-btn" data-filter="general" type="button">
+            General
           </button>
-          <button class="filter-btn" data-filter="specialist">
+          <button class="filter-btn" data-filter="specialist" type="button">
             Especialistas
           </button>
-          <button class="filter-btn" data-filter="urgent">Urgencias</button>
+          <button class="filter-btn" data-filter="urgent" type="button">
+            Urgencias
+          </button>
         </div>
       </section>
 
-      <section class="services-grid-container">
-        <div class="services-grid">
+      <section class="services-grid-container" aria-live="polite">
+        <div class="services-grid" id="servicesGrid">
           <article class="service-card" data-category="general">
-            <div class="card-icon">🩺</div>
-            <h3>Exámenes de Bienestar</h3>
-            <p>
-              Evaluaciones físicas integrales y detecciones preventivas para
-              asegurar una vitalidad duradera.
-            </p>
-            <button class="btn-text">Saber más</button>
+            <div class="card-icon" aria-hidden="true">🩺</div>
+            <h3>Exámenes de bienestar</h3>
+            <p>Chequeos preventivos, control de peso y detección temprana.</p>
+            <ul class="card-list">
+              <li>Historial clínico digital</li>
+              <li>Planes anuales personalizados</li>
+            </ul>
+            <button
+              class="btn-text"
+              type="button"
+              data-modal-target="generalModal"
+            >
+              Saber más
+            </button>
           </article>
 
           <article class="service-card" data-category="specialist">
-            <div class="card-icon">🔪</div>
-            <h3>Cuidado Quirúrgico</h3>
-            <p>
-              Procedimientos avanzados realizados en un entorno estéril con los
-              más altos estándares de anestesia.
-            </p>
-            <button class="btn-text">Saber más</button>
+            <div class="card-icon" aria-hidden="true">🔪</div>
+            <h3>Cirugía y hospitalización</h3>
+            <p>Procedimientos con monitoreo continuo y recuperación segura.</p>
+            <ul class="card-list">
+              <li>Quirófano equipado</li>
+              <li>Seguimiento postoperatorio</li>
+            </ul>
+            <button
+              class="btn-text"
+              type="button"
+              data-modal-target="surgeryModal"
+            >
+              Saber más
+            </button>
           </article>
 
           <article class="service-card" data-category="general">
-            <div class="card-icon">💉</div>
-            <h3>Vacunación</h3>
-            <p>
-              Protocolos de inmunización personalizados según el estilo de vida
-              y entorno de tu mascota.
-            </p>
-            <button class="btn-text">Saber más</button>
+            <div class="card-icon" aria-hidden="true">💉</div>
+            <h3>Vacunación y desparasitación</h3>
+            <p>Protocolos por especie, edad y estilo de vida.</p>
+            <ul class="card-list">
+              <li>Recordatorio automatizado</li>
+              <li>Carnet actualizado</li>
+            </ul>
+            <button
+              class="btn-text"
+              type="button"
+              data-modal-target="vaccineModal"
+            >
+              Saber más
+            </button>
           </article>
 
-          <article class="service-card" data-category="general">
-            <div class="card-icon">🦷</div>
-            <h3>Salud Dental</h3>
+          <article class="service-card" data-category="specialist">
+            <div class="card-icon" aria-hidden="true">🔬</div>
+            <h3>Diagnóstico avanzado</h3>
             <p>
-              Limpiezas profesionales y cuidado periodontal para prevenir
-              enfermedades sistémicas.
+              Laboratorio, imagen y pruebas de precisión para decisiones
+              clínicas rápidas.
             </p>
-            <button class="btn-text">Saber más</button>
+            <ul class="card-list">
+              <li>Resultados en 24h</li>
+              <li>Paneles específicos por síntoma</li>
+            </ul>
+            <button
+              class="btn-text"
+              type="button"
+              data-modal-target="diagModal"
+            >
+              Saber más
+            </button>
           </article>
 
           <article class="service-card" data-category="urgent">
-            <div class="card-icon">💊</div>
-            <h3>Farmacia 24/7</h3>
+            <div class="card-icon" aria-hidden="true">🚨</div>
+            <h3>Urgencias 24/7</h3>
             <p>
-              Servicio de farmacia propio con medicamentos verificados y planes
-              de nutrición terapéutica.
+              Atención inmediata ante trauma, intoxicación o dificultad
+              respiratoria.
             </p>
-            <button class="btn-text">Saber más</button>
+            <ul class="card-list">
+              <li>Triage de alta prioridad</li>
+              <li>Equipo de guardia</li>
+            </ul>
+            <button
+              class="btn-text"
+              type="button"
+              data-modal-target="urgentModal"
+            >
+              Saber más
+            </button>
           </article>
 
-          <article class="service-card" data-category="specialist">
-            <div class="card-icon">🔬</div>
-            <h3>Diagnósticos</h3>
-            <p>
-              Laboratorio de resultados rápidos e imágenes digitales para
-              obtener respuestas inmediatas.
-            </p>
-            <button class="btn-text">Saber más</button>
+          <article class="service-card" data-category="urgent">
+            <div class="card-icon" aria-hidden="true">💊</div>
+            <h3>Farmacia clínica</h3>
+            <p>Medicamentos verificados y nutrición terapéutica.</p>
+            <ul class="card-list">
+              <li>Entrega programada</li>
+              <li>Control de stock inteligente</li>
+            </ul>
+            <button
+              class="btn-text"
+              type="button"
+              data-modal-target="pharmacyModal"
+            >
+              Saber más
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="accordion-section" aria-labelledby="faqTitle">
+        <h2 id="faqTitle">Preguntas frecuentes</h2>
+        <div class="accordion" data-accordion>
+          <article class="accordion-item">
+            <button
+              class="accordion-trigger"
+              type="button"
+              aria-expanded="false"
+            >
+              ¿Necesito cita previa para consulta general?
+            </button>
+            <div class="accordion-content">
+              <p>
+                Te recomendamos reservar para evitar esperas, pero aceptamos
+                casos espontáneos según disponibilidad.
+              </p>
+            </div>
+          </article>
+          <article class="accordion-item">
+            <button
+              class="accordion-trigger"
+              type="button"
+              aria-expanded="false"
+            >
+              ¿Atienden especies exóticas?
+            </button>
+            <div class="accordion-content">
+              <p>
+                Sí, contamos con especialistas en pequeñas aves, reptiles y
+                mamíferos no convencionales.
+              </p>
+            </div>
           </article>
         </div>
       </section>
 
       <section class="urgent-info">
         <div class="info-content">
-          <h2>¿Necesitas atención especializada urgente?</h2>
-          <p>
-            Nuestro equipo de especialistas certificados está disponible para
-            diagnósticos avanzados que requieren un alto nivel de experiencia
-            técnica.
-          </p>
+          <h2>¿Necesitas atención urgente?</h2>
+          <p>Nuestro equipo de emergencias está disponible las 24 horas.</p>
           <div class="cta-group">
-            <button class="btn-primary">Reservar Consulta</button>
-            <button class="btn-secondary">Conocer al Equipo</button>
+            <a class="btn-primary" href="contacto.html">Reservar consulta</a>
+            <a class="btn-secondary" href="tel:5559990000">Llamar ahora</a>
           </div>
         </div>
         <div class="info-image">
           <img
             src="img/consultorio.png"
-            alt="Especialista veterinario examinando una radiografía"
+            alt="Especialista veterinario evaluando una radiografía"
           />
         </div>
       </section>
+
+      <div
+        class="modal"
+        id="serviceModal"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden="true"
+        aria-labelledby="modalTitle"
+      >
+        <div class="modal-content">
+          <button class="modal-close" type="button" aria-label="Cerrar modal">
+            ×
+          </button>
+          <h3 id="modalTitle">Detalle del servicio</h3>
+          <p id="modalDescription">Contenido del servicio.</p>
+        </div>
+      </div>
     </main>
 
     <footer>
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h4>Mascotas Vet MJ&ARI</h4>
-          <p>
-            Elevando el estándar de excelencia veterinaria a través de precisión
-            clínica y corazón compasivo.
-          </p>
-        </div>
-
-        <div class="footer-nav">
+      <div class="footer-container">
+        <div class="footer-column">
           <h4>Navegación</h4>
           <ul>
             <li><a href="index.html">Inicio</a></li>
@@ -152,11 +269,10 @@
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </div>
-
-        <div class="footer-contact">
-          <h4>Mantente Conectado</h4>
+        <div class="footer-column">
+          <h4>Contacto</h4>
           <p>Calle Ficticia #123, Cochabamba</p>
-          <p>Abierto 24/7 para Emergencias</p>
+          <p>Emergencias 24/7</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -164,6 +280,9 @@
       </div>
     </footer>
 
+    <button class="back-to-top" type="button" aria-label="Volver arriba">
+      ↑
+    </button>
     <script src="js/main.js"></script>
   </body>
 </html>

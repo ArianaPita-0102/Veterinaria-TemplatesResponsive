@@ -1,109 +1,149 @@
-@import 'variables';
+.contact-hero,
+.contact-container,
+.emergency-cta {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
 
 .contact-hero {
-    text-align: center;
-    padding: 3rem 1.5rem;
-    
-    .subtitle {
-        color: $secondary-color;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 0.8rem;
-    }
+  text-align: center;
+  padding: 2.8rem 0 1.4rem;
 
-    h1 {
-        font-size: 2.5rem;
-        color: $accent-color;
-        margin: 1rem 0;
-    }
+  h1 {
+    margin: 0.65rem 0;
+    color: $accent-color;
+    font-size: clamp(2rem, 3.8vw, 2.8rem);
+  }
 }
 
 .contact-container {
+  display: grid;
+  gap: 1rem;
+
+  .contact-form-wrapper,
+  .contact-info {
+    background: $white;
+    border-radius: $border-radius;
+    box-shadow: $shadow-soft;
+    padding: 1.2rem;
+  }
+
+  .form-intro {
+    color: $text-muted;
+    margin-bottom: 1rem;
+  }
+
+  .form-row {
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.9rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+      color: $accent-color;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba($accent-color, 0.2);
+      border-radius: 10px;
+      background: $bg-input;
+      padding: 0.82rem;
+      font-family: inherit;
+    }
+  }
+
+  .checkbox-group {
     display: flex;
-    flex-direction: column; // Móvil primero [cite: 112, 115]
-    gap: 2rem;
-    padding: 0 1.5rem 4rem;
-    max-width: 1100px;
-    margin: 0 auto;
+    align-items: flex-start;
+    gap: 0.55rem;
 
-    @media (min-width: $tablet) {
-        flex-direction: row; // Tablet y Laptop [cite: 110, 111]
+    input {
+      width: auto;
+      margin-top: 0.2rem;
     }
 
-    // Estilos del Formulario [cite: 80]
-    .contact-form-wrapper {
-        flex: 1.5;
-        background-color: $white;
-        padding: 2rem;
-        border-radius: $border-radius;
+    label {
+      margin: 0;
+      font-weight: 500;
+      color: $text-main;
+    }
+  }
 
-        .form-group {
-            margin-bottom: 1.5rem;
-            
-            label {
-                display: block;
-                margin-bottom: 0.5rem;
-                font-weight: bold;
-                color: $accent-color;
-                font-size: 0.9rem;
-            }
+  .error-msg {
+    display: block;
+    color: $danger;
+    font-size: 0.85rem;
+    min-height: 1.2rem;
+  }
 
-            input, select, textarea {
-                width: 100%;
-                padding: 1rem;
-                border: none;
-                background-color: $bg-input;
-                border-radius: 8px;
-                font-family: $font-main;
+  .form-feedback {
+    margin-top: 1rem;
+    font-weight: 700;
 
-                &:focus {
-                    outline: 2px solid $secondary-color;
-                }
-            }
-        }
+    &.success {
+      color: $success;
     }
 
-    // Información Lateral [cite: 62]
-    .contact-info {
-        flex: 1;
-        background-color: #f4f1f0; // Fondo sutil para la info
-        padding: 2rem;
-        border-radius: $border-radius;
-
-        .info-block {
-            margin-bottom: 2rem;
-
-            h3 {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                font-size: 1.1rem;
-                margin-bottom: 1rem;
-                color: $accent-color;
-            }
-
-            ul {
-                list-style: none;
-                li {
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 0.5rem;
-                    color: $text-muted;
-                }
-            }
-        }
+    &.error {
+      color: $danger;
     }
+  }
+
+  .info-block {
+    margin-bottom: 1rem;
+
+    h3 {
+      margin-bottom: 0.3rem;
+      color: $accent-color;
+    }
+
+    ul {
+      list-style: none;
+      color: $text-muted;
+    }
+  }
+
+  .map-placeholder {
+    img {
+      border-radius: 12px;
+      min-height: 180px;
+      object-fit: cover;
+    }
+  }
 }
 
-// Mapa Ficticio [cite: 63]
-.map-placeholder {
-    width: 100%;
-    height: 250px;
-    background-color: #e5e0dd;
-    border-radius: $border-radius;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-    border: 1px dashed $secondary-color;
+.emergency-cta {
+  padding: 2rem 0 3rem;
+
+  .cta-box {
+    background: rgba($secondary-color, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    padding: 1.8rem 1rem;
+  }
+
+  .btn-emergency-lg {
+    margin-top: 0.9rem;
+    background: #1f1f1f;
+    color: $white;
+    padding: 0.9rem 1.5rem;
+  }
+}
+
+@media (min-width: $tablet) {
+  .contact-container {
+    grid-template-columns: 1.25fr 0.95fr;
+
+    .form-row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 }

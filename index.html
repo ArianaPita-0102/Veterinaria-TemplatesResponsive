@@ -3,75 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mascotas Vet MJ&ARI: atención veterinaria integral con citas online, especialistas y emergencias 24/7."
+    />
     <title>Veterinaria MJ&ARI - Inicio</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <nav class="nav-container">
-        <div class="logo">
-          <span class="brand-name">Mascotas Vet MJ&ARI</span>
-        </div>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
 
-        <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
+    <header class="site-header">
+      <nav class="nav-container" aria-label="Navegación principal">
+        <a
+          class="logo"
+          href="index.html"
+          aria-label="Ir al inicio de Mascotas Vet MJ&ARI"
+        >
+          <span class="brand-name">Mascotas Vet MJ&amp;ARI</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mainNav"
+          aria-label="Abrir menú de navegación"
+        >
+          ☰
+        </button>
+
+        <ul class="nav-links" id="mainNav">
+          <li><a href="index.html" class="active">Inicio</a></li>
           <li><a href="servicios.html">Servicios</a></li>
           <li><a href="contacto.html">Contáctanos</a></li>
         </ul>
 
-        <button class="btn-emergency" aria-label="Llamada de emergencia">
+        <a
+          class="btn-emergency"
+          href="tel:5559990000"
+          aria-label="Llamada de emergencia"
+        >
           Llamada de Emergencia
-        </button>
+        </a>
       </nav>
     </header>
 
-    <main>
-      <section class="hero-section">
+    <main id="contenido-principal">
+      <section class="hero-section" aria-label="Bienvenida">
         <div class="hero-content">
-          <div class="hero-image">
+          <div class="hero-text">
+            <span class="subtitle">Atención Especializada</span>
+            <h1>Cuidado compasivo y tecnología avanzada para tu mascota</h1>
+            <p>
+              Un equipo clínico integral con diagnóstico de alta precisión,
+              acompañamiento humano y protocolos modernos en cada visita.
+            </p>
+            <div class="hero-actions">
+              <a href="contacto.html" class="btn-primary">Reservar cita</a>
+              <a href="servicios.html" class="btn-secondary"
+                >Explorar servicios</a
+              >
+            </div>
+          </div>
+
+          <figure class="hero-image">
             <img
               src="img/goldenandvet.png"
               alt="Veterinario atendiendo a un perro Golden Retriever"
             />
-          </div>
-
-          <div class="hero-text">
-            <span class="subtitle">Atención Especializada</span>
-            <h1>Cuidado Compasivo para tus Mascotas</h1>
-            <p>
-              Experimenta un nuevo estándar en medicina veterinaria donde la
-              tecnología de punta se encuentra con la empatía sincera.
-            </p>
-            <div class="hero-actions">
-              <a href="contacto.html" class="btn-primary">Reservar Cita</a>
-              <a href="servicios.html" class="btn-secondary">Ver Servicios</a>
-            </div>
-          </div>
+          </figure>
         </div>
       </section>
 
-      <section class="about-section">
+      <section class="about-section" aria-labelledby="aboutTitle">
         <div class="about-container">
-          <div class="about-text">
-            <span class="subtitle">Nuestra Historia</span>
-            <h2>Un Santuario Diseñado para la Sanación</h2>
+          <article class="about-text">
+            <span class="subtitle">Nuestra historia</span>
+            <h2 id="aboutTitle">Un centro diseñado para sanar con confianza</h2>
             <p>
-              En Mascotas Vet MJ&ARI, creemos que el entorno es tan importante
-              como el tratamiento médico. Desde salas de espera con feromonas
-              hasta suites de recuperación insonorizadas.
+              Integramos medicina preventiva, cirugías programadas y seguimiento
+              digital del paciente para que cada familia tenga un plan
+              veterinario claro.
             </p>
-
-            <div class="stats-grid">
+            <div class="stats-grid" aria-label="Indicadores de la clínica">
               <div class="stat-item">
                 <span class="number">15+</span>
-                <span class="label">Años de Excelencia</span>
+                <span class="label">Años de experiencia</span>
               </div>
               <div class="stat-item">
-                <span class="number">12k+</span>
-                <span class="label">Pacientes Felices</span>
+                <span class="number">12K+</span>
+                <span class="label">Pacientes atendidos</span>
+              </div>
+              <div class="stat-item">
+                <span class="number">4.9/5</span>
+                <span class="label">Satisfacción promedio</span>
               </div>
             </div>
-          </div>
+          </article>
 
           <div class="about-gallery">
             <img
@@ -86,44 +115,88 @@
         </div>
       </section>
 
-      <section class="features-section">
-        <h2>¿Por qué elegir nuestro Centro Especializado?</h2>
+      <section class="slider-section" aria-labelledby="testimonialsTitle">
+        <div class="section-heading">
+          <h2 id="testimonialsTitle">Historias de nuestros clientes</h2>
+          <p>Desliza para conocer experiencias reales.</p>
+        </div>
+
+        <div class="slider" data-slider>
+          <button
+            class="slider-control prev"
+            type="button"
+            data-slider-prev
+            aria-label="Anterior"
+          >
+            ‹
+          </button>
+          <div class="slides" data-slider-track>
+            <article class="slide active" data-slide>
+              <p>
+                “La atención fue impecable y nos explicaron cada paso del
+                tratamiento. Mi gato se recuperó súper rápido.”
+              </p>
+              <h3>— Carla y Milo</h3>
+            </article>
+            <article class="slide" data-slide>
+              <p>
+                “El equipo de emergencias respondió en minutos. Nos sentimos
+                acompañados durante todo el proceso.”
+              </p>
+              <h3>— Andrés y Nala</h3>
+            </article>
+            <article class="slide" data-slide>
+              <p>
+                “El plan preventivo anual nos ayudó a detectar a tiempo un
+                problema dental. Excelente seguimiento.”
+              </p>
+              <h3>— Lucía y Rocky</h3>
+            </article>
+          </div>
+          <button
+            class="slider-control next"
+            type="button"
+            data-slider-next
+            aria-label="Siguiente"
+          >
+            ›
+          </button>
+        </div>
+      </section>
+
+      <section class="features-section" aria-labelledby="featuresTitle">
+        <div class="section-heading">
+          <h2 id="featuresTitle">¿Por qué elegirnos?</h2>
+        </div>
         <div class="features-grid">
           <article class="feature-card">
-            <h3>Veterinarios Expertos</h3>
+            <h3>Equipo multidisciplinario</h3>
             <p>
-              Nuestro equipo está formado por especialistas certificados
-              comprometidos con la salud animal.
+              Especialistas en medicina interna, cirugía, nutrición y
+              dermatología.
             </p>
           </article>
-
           <article class="feature-card">
-            <h3>Instalaciones Modernas</h3>
+            <h3>Laboratorio y diagnóstico</h3>
             <p>
-              Equipados con lo último en diagnóstico por imagen y tecnología
-              quirúrgica.
+              Resultados rápidos con imágenes digitales y pruebas clínicas de
+              precisión.
             </p>
           </article>
-
           <article class="feature-card">
-            <h3>Atención de Emergencia</h3>
-            <p>
-              Acción rápida y decidida cuando cada segundo cuenta para salvar
-              una vida.
-            </p>
+            <h3>Atención continua</h3>
+            <p>Recordatorios, seguimiento post-consulta y urgencias 24/7.</p>
           </article>
         </div>
       </section>
 
-      <section class="cta-section">
-        <h2>Vive la Diferencia de Nuestro Santuario</h2>
-        <p>Actualmente estamos recibiendo nuevos pacientes.</p>
-        <button
-          class="btn-primary"
-          onclick="window.location.href = 'contacto.html'"
-        >
-          Programa tu Primera Visita
-        </button>
+      <section class="cta-section" aria-labelledby="ctaTitle">
+        <h2 id="ctaTitle">Agenda tu primera visita hoy</h2>
+        <p>
+          Estamos recibiendo nuevos pacientes en consulta general y
+          especialidades.
+        </p>
+        <a class="btn-primary" href="contacto.html">Programar visita</a>
       </section>
     </main>
 
@@ -132,9 +205,9 @@
         <div class="footer-column">
           <h4>Servicios</h4>
           <ul>
-            <li><a href="servicios.html">Bienestar y Cuidado</a></li>
-            <li><a href="servicios.html">Excelencia Quirúrgica</a></li>
-            <li><a href="servicios.html">Diagnósticos</a></li>
+            <li><a href="servicios.html">Consultas y prevención</a></li>
+            <li><a href="servicios.html">Especialidades clínicas</a></li>
+            <li><a href="servicios.html">Urgencias y hospitalización</a></li>
           </ul>
         </div>
 
@@ -146,10 +219,15 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Mascotas Vet MJ&ARI - Universidad Católica Boliviana</p>
+        <p>
+          &copy; 2026 Mascotas Vet MJ&amp;ARI - Universidad Católica Boliviana
+        </p>
       </div>
     </footer>
 
+    <button class="back-to-top" type="button" aria-label="Volver arriba">
+      ↑
+    </button>
     <script src="js/main.js"></script>
   </body>
 </html>

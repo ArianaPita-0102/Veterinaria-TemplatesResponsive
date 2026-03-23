@@ -1,21 +1,19 @@
-$primary-color: #7d5a50;    // Café principal
-$secondary-color: #b4846c;  // Café claro / canela
-$accent-color: #4b3832;     // Café oscuro para texto fuerte
-$bg-light: #fcf8f5;         // Crema/Beige muy claro para fondos
-$bg-card: #ffffff;          // Fondo de tarjetas
-$bg-cream: #fcf8f5;         // Fondo general
-$bg-input: #eceae9;         // Fondo de campos de texto
+$primary-color: #7d5a50;
+$secondary-color: #b4846c;
+$accent-color: #4b3832;
+$bg-light: #fcf8f5;
+$bg-card: #ffffff;
+$bg-input: #f1edea;
+$text-main: #2f2f2f;
+$text-muted: #646464;
 $white: #ffffff;
-$text-main: #333333;
-$text-muted: #666666;
-$text-dark: #2d2421;        // Texto principal oscuro
+$danger: #b42318;
+$success: #0b8f4d;
+$shadow-soft: 0 10px 30px rgba(23, 23, 23, 0.08);
+$border-radius: 14px;
 
-// Tipografía
 $font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-$border-radius: 12px;
 
-
+$mobile: 480px;
 $tablet: 768px;
 $desktop: 1024px;
-$mobile: 480px;
-
